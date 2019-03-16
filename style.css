@@ -1,0 +1,10 @@
+.flash {
+  background-color: #fff;
+}
+#flash {
+  height: 100px;
+  width: 100px;
+}
+body {
+  background-color: #00f;
+}
