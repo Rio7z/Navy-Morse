@@ -4,16 +4,18 @@
   "description": "Navy Morse Code Project",
   "main": "index.html",
   "scripts": {
-    "start": "concurrently \"pug -w index.pug\" \"stylus -w style.styl -o style.css\"",
+    "start": "concurrently \"pug -w index.pug\" \"stylus -w style.styl -o style.css\" \"babel script.js --w --o script.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kane Crane UP834734",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.3.4",
     "concurrently": "^4.1.0",
-    "express": "^4.16.4",
     "pug": "^2.0.3",
     "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4"
   }
 }

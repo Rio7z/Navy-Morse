@@ -7,14 +7,13 @@ html
     h1 EXAM
 
     #score
+    #answer
 
     #flash
 
-    form(action='')
-      input(id='guess', type='text', name='guess')
-      br
-      button(id='submit', onclick='guessAssign()') Guess
+    input(id='guess', type='text')
+    br
+    button(id='submit', onclick='guessAssign()') Guess
 
-    #answer
 
     script(src='script.js')
