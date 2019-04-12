@@ -17,10 +17,12 @@ function start(){
     repeat.style.visibility = "hidden"
     guess.style.visibility = "visible"
     
+    sequence = []
     randomMorse(morse)
     showMorse(sequence)
     setTimeout(() => {submit.style.visibility = "visible", repeat.style.visibility = "visible"}, timeUnit * 20)
 }
+
 function repeatSeq() {
     event.preventDefault()
     const repeat = document.getElementById('repeat')
@@ -35,21 +37,22 @@ function repeatSeq() {
         repeat.style.visibility = "visible"
     }, timeUnit * 20)
 }
+
 function guessAssign() {
     event.preventDefault()
     guessAssigned = document.getElementById('guess').value.toUpperCase()
     
     compareGuess(guessAssigned, sequence)
     document.getElementById("guess").value = ''
-
     start()
+
 }
 
 function randomMorse(morse) {
     let keys = Object.keys(morse)
     let letter = keys[keys.length * Math.random() << 0 ]
     let code = morse[letter[letter.length * Math.random() << 0 ]]
-    
+
     sequence.push(letter, code)
 }
 
