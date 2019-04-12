@@ -11,9 +11,11 @@ html
 
     #flash
 
-    input(id='guess', type='text')
+    input(id='guess', type='text', maxlength="1")
     br
+    button(id='start', onclick='start()') Start
     button(id='submit', onclick='guessAssign()') Guess
+    button(id='repeat', onclick='repeatSeq()') Repeat
 
 
     script(src='script.js')
