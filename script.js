@@ -10,38 +10,38 @@ function start(){
     const submit = document.getElementById('submit')
     const start = document.getElementById('start')
     const guess = document.getElementById('guess')
-    
+
     score.innerHTML = `Correct ${pass.length} | Incorrect ${fail.length}`
-    start.style.visibility = "hidden"
-    submit.style.visibility = "hidden"
-    repeat.style.visibility = "hidden"
-    guess.style.visibility = "visible"
-    
+    start.style.display = "none"
+    submit.style.display = "none"
+    repeat.style.display = "none"
+    guess.style.display = "block"
+
     sequence = []
     randomMorse(morse)
     showMorse(sequence)
-    setTimeout(() => {submit.style.visibility = "visible", repeat.style.visibility = "visible"}, timeUnit * 20)
+    setTimeout(() => {submit.style.display = "inline-block", repeat.style.display = "inline-block"}, timeUnit * 20)
 }
 
 function repeatSeq() {
     event.preventDefault()
     const repeat = document.getElementById('repeat')
 
-    submit.style.visibility = "hidden"
-    repeat.style.visibility = "hidden"
+    submit.style.display = "none"
+    repeat.style.display = "none"
 
     showMorse(sequence)
 
     setTimeout(() => {
-        submit.style.visibility = "visible",
-        repeat.style.visibility = "visible"
+        submit.style.display = "inline-block",
+        repeat.style.display = "inline-block"
     }, timeUnit * 20)
 }
 
 function guessAssign() {
     event.preventDefault()
     guessAssigned = document.getElementById('guess').value.toUpperCase()
-    
+
     compareGuess(guessAssigned, sequence)
     document.getElementById("guess").value = ''
     start()
@@ -58,8 +58,8 @@ function randomMorse(morse) {
 
 function compareGuess(guessAssigned, sequence){
     const answer = document.getElementById('answer');
-    
-    (guessAssigned != sequence[0]) 
+
+    (guessAssigned != sequence[0])
     ? (answer.innerHTML = 'wrong',
     setTimeout(() => {
         answer.innerHTML = ''
@@ -70,7 +70,7 @@ function compareGuess(guessAssigned, sequence){
         answer.innerHTML = ''
     }, timeUnit * 2),
     pass.push(sequence[0]))
-    
+
 }
 
 function showMorse(sequence) {
@@ -80,7 +80,7 @@ function showMorse(sequence) {
         flash.className = ''
         flash.className += 'flash'
         setTimeout(() => {flash.className = ''}, timeUnit*time)
-    }  
+    }
     sequence[1].forEach((element, index) => {
         setTimeout(() => {
             (element == 'dash') ? addFlash(3) : addFlash(1)
