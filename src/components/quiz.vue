@@ -118,7 +118,7 @@ export default {
       function addFlash(time) {
           flash.className = ''
           flash.className += 'flash'
-          setTimeout(() => {flash.className = ''}, this.timeUnit * time)
+          setTimeout(() => {flash.className = ''}, 500 * time)
       }
       this.sequence[1].forEach((element, index) => {
         setTimeout(() => {
