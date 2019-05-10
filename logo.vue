@@ -1,0 +1,30 @@
+<template>
+  <div id="logo">
+    <img src="..\img\RN_logo.svg"></img>
+  </div>
+</template>
+
+<script>
+
+export default {
+    data () {
+        return {
+
+        }
+    },
+    methods: {
+
+    }
+  }
+
+</script>
+
+<style scoped>
+#logo img{
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+  }
+</style>
