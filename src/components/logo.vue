@@ -1,6 +1,6 @@
 <template>
   <div id="logo">
-    <img src="..\img\RN_logo.svg">
+    <img src="..\img\RN_logo.svg"></img>
   </div>
 </template>
 
