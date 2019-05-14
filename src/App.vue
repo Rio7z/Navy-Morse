@@ -1,7 +1,7 @@
 <template>
     <div>
       <logo></logo>
-      <router-view></router-view>
+      <router-view/>
     </div>
 </template>
 
@@ -10,7 +10,8 @@ import logo from "./components/logo.vue";
 
 export default {
     components: {
-      'logo': logo
+      logo
+
     },
 
     data () {
